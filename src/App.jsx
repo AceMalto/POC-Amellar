@@ -4,6 +4,11 @@ import Home from './pages/Home';
 import Settings from './pages/setting';
 import Admin from './pages/Admin';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Products from './pages/products';
+import Customers from './pages/customers';
+import Helps from './pages/helps';
+import Manages from './pages/manages';
+import Logout from './pages/logout';
 
 function App() {
   const [isOpen, setIsOpen] = useState(true);
@@ -23,6 +28,11 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/customers" element={<Customers />} />
+            <Route path="/helps" element={<Helps />} />
+            <Route path="/manages" element={<Manages />} />
+            <Route path="/logout" element={<Logout />} />
           </Routes>
         </main>
       </div>

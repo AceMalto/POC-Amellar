@@ -1,13 +1,22 @@
 import { Link, useLocation } from 'react-router-dom';
 import clsx from 'clsx';
-import { IoMenu, IoSettings } from "react-icons/io5";
-import { IoMdClose } from "react-icons/io";
-import { MdDashboard } from "react-icons/md";
+import { IoMenu, IoSettings, IoLogOutOutline, IoSettingsOutline } from "react-icons/io5";
+import { IoMdClose, IoIosHelpCircleOutline  } from "react-icons/io";
+import { MdDashboard, MdProductionQuantityLimits } from "react-icons/md";
+import { LuUsers } from "react-icons/lu";
+import { RiUserSettingsLine } from "react-icons/ri";
+
 
 const navItems = [
     { icon: <MdDashboard />, label: 'Dashboard', path: '/' },
     { icon: <IoSettings />, label: 'Admin', path: '/admin' },
-    { icon: <IoSettings />, label: 'Settings', path: '/settings' },
+    { icon: <MdProductionQuantityLimits />, label: 'Product', path: '/products' },
+    { icon: <RiUserSettingsLine />, label: 'Customer', path: '/customers' },
+    { icon: '', label: 'ACCOUNT', path: '' },
+    { icon: <IoSettingsOutline />, label: 'Settings', path: '/settings' },
+    { icon: <IoIosHelpCircleOutline />, label: 'Help', path: '/helps' },
+    { icon: <LuUsers />, label: 'Manage Users', path: '/manages' },
+    { icon: <IoLogOutOutline />, label: 'Logout', path: '/logout' },
 ];
 
 export default function Nav({ isOpen, toggleNav }) {
@@ -17,7 +26,7 @@ export default function Nav({ isOpen, toggleNav }) {
         <div
         className={clsx(
             'h-screen bg-gray-800 text-white transition-all duration-300 flex flex-col pl-2',
-            isOpen ? 'w-[130px]' : 'w-[50px]'
+            isOpen ? 'w-[160px]' : 'w-[50px]'
         )}
         >
         <button

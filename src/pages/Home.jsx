@@ -40,8 +40,15 @@ const tableData = [
 
 const Home = () => {
     return (
-        <div className="space-y-3 h-full overflow-y-auto px-3">
-
+        <div className="space-y-3 h-full overflow-y-auto px-3 pb-5">
+            <div>
+                <h1 className='text-xl font-bold mb-1'>
+                    Welcome Back, User!
+                </h1>
+                <p className='text-gray-600 text-sm'>
+                    Here’s a quick overview of your dashboard.
+                </p>
+            </div>
             {/* Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {[
